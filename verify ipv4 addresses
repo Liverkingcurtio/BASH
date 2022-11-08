@@ -1,0 +1,8 @@
+adr="$1"
+echo $adr | grep -q [1-255].[1-255].[1-255].[1-255]
+if [ $? -eq 0 ]
+  then
+  echo "True"
+else
+  echo "False"
+  fi
