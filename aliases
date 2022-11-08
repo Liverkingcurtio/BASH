@@ -4,3 +4,4 @@ alias gedit='nano'                  "
 alias vi='nano'                     "
 alias x='cat etc/passwd'            creates an alias for Command: cat/etc/passwd
 alias y=$(cat /etc/shadow) 
+command echo -e '\u2261'            will negate the alias and function and will run it as a command
