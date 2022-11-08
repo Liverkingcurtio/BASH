@@ -1,0 +1,3 @@
+echo $PATH > info_path
+
+will redirect comman to new file, if its not created it will do so
