@@ -1,0 +1,6 @@
+alias rm='rm -i'                    creates alias to confirm removal
+alias vim='nano'                    creates an alias for `nano'
+alias gedit='nano'                  "
+alias vi='nano'                     "
+alias x='cat etc/passwd'            creates an alias for Command: cat/etc/passwd
+alias y=$(cat /etc/shadow) 
