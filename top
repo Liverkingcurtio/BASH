@@ -1,0 +1,3 @@
+ top -k <PID>		kills process
+ top -P 		sorts by CPU usage
+ top -M 		sorts by Memory usage
