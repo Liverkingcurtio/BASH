@@ -6,3 +6,12 @@ cat /etc/passwd | awk '/system/{print $0}' | awk '{print $2}'         or        
 
 cat /etc/passwd | awk '/system/{print $0}' | awk -F: '{print $2}'         or        awk '/system/{print $0}' /etc/passwd | awk -F: '{print $2}' 
 -returns second element delimited by semi colons
+
+
+echo "Python is better than Bash"
+Python is better than bash
+
+echo "Python is better than Bash" | awk '{$1=$5="";print "Something"$0"Nothing"}'
+-returns "Something is better than Nothing" replacing bash and python
+
+
