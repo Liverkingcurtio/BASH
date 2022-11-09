@@ -1,0 +1,6 @@
+alias sus='echo this shit sus asf'
+-makes an alias of whats quoted as sus
+
+unalias sus
+-takes away the sus alias
+
