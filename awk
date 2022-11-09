@@ -14,4 +14,8 @@ Python is better than bash
 echo "Python is better than Bash" | awk '{$1=$5="";print "Something"$0"Nothing"}'
 -returns "Something is better than Nothing" replacing bash and python
 
-
+SUBJECT=MOM
+VERB=DAD
+OBJECT=BROTHER
+echo "managers manage equitment" | awk -v ss=$SUBJECT -v vv=$VERB -v oo=$OBJECT '{$1=ss;$2=vv;$3=oo;print}'
+-return "MOM DAD BROTHER"
