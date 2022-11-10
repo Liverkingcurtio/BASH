@@ -1,0 +1,28 @@
+(variables) P.S. variables are only goof for the shell that they are in
+me=Curtis
+
+call upon variables
+echo $me
+
+functions 
+
+#!/bin/bash
+
+function_name () {
+        commands
+ }
+ function_name
+ 
+ or function_name () { commands }
+ 
+ 
+ 
+ functiontest () {
+ if [ -e /etc/shadow ] ;
+ then
+        echo "Shadoe exist"
+ else
+        echo "shadow is missing"
+ fi
+ }
+ functiontest
