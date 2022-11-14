@@ -1,0 +1,4 @@
+ files in $HOME/1123 that end in .txt.
+ 
+ 
+ find ./1123 -type f \( -name *.txt ! -name "*~*" \)
