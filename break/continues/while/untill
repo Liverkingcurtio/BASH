@@ -1,0 +1,32 @@
+if [[ <condition> ]];then
+  break
+fi
+
+if [[ <condition>]];then 
+  continue
+fi
+
+
+#!/bin/bash
+counter=1
+while [[ $counter -le 10 ]]
+do
+  echo $counter
+  ((counter++))
+done
+echo "All Done!"
+
+
+#!/bin/bash
+for x in {elle,ashton,gonz,haleena,stew,lindsey} ; do
+    echo $x
+done
+
+(RETURNS all name in list on new line)
+
+for x in $(cat /etc/passwd | awk -F: '{print $1}')
+do echo $x is a user on the systerm
+done
+
+(RETURNS first feild in /etc/passwd and says theyre a user on the system)
+
