@@ -1,0 +1,3 @@
+find all empty files/directories in directory /var and print out ONLY the filename (not absolute path), and the inode number, separated by newlines
+
+find /var -empty -printf "%i %f\n"
