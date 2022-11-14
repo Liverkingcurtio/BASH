@@ -1,0 +1,13 @@
+#basic until loop
+  function autobots () {
+     counter=1
+      until [[ $counter -eq 1000000 ]]
+      do
+          echo $counter
+          ((counter++))
+  
+      done
+      echo "Till all are one"
+  
+  }
+  autobots
