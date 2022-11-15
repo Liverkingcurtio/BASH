@@ -1,0 +1,28 @@
+
+
+rootline=$(egrep "root" $HOME/passwd)
+
+for x in LARRY CURLY MOE; do
+
+  ID=$(cat $HOME/$x.txt)
+
+  mkdir $HOME/$x
+
+  echo $rootline | awk -F: -v uu=$x -v ii=$ID '{OFS=":"}{$1=uu;$3=$4=ii;$6="$HOME/"uu;$NF="/bin/bash";print}' >> $HOME/passwd
+
+done
+
+
+
+
+
+Utilize Bash looping to iteratively create each user account and their directories.
+
+    Design a basic FOR Loop that iteratively alters the file system and user entries in a passwd-like file for new users: LARRY, CURLY, and MOE.
+    Each user should have an entry in the $HOME/passwd file
+    The userid and groupid will be the same and can be found as the sole contents of a file with the user's name in the $HOME directory (i.e. $HOME/LARRY.txt might contain 123)
+    The home directory will be a directory with the user's name located under the $HOME directory (i.e. $HOME/LARRY)
+        NOTE: Do NOT use shell expansion when specifying this in the $HOME/passwd file.
+    The default shell will be /bin/bash
+    The other fields in the new entries should match root's entry
+    Users should be created in the order specified
