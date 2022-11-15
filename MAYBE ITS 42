@@ -1,0 +1,21 @@
+Create a script that will perform the following actions:
+
+    Print to standard output the total number of files in the directory specified by dirname.
+    If the directory does not exist, print 'Invalid Directory'
+    The count excludes the '.' and '..' pseudo-directories.
+
+
+function q1()
+{
+  #Valid Variables are:
+dirname=$1
+
+if [ -d $1 ] ; then
+    ls -i $1 | wc -l
+
+else
+ echo "Invalid Directory"
+ 
+fi 
+
+}
