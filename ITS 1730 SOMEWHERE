@@ -1,0 +1,4 @@
+create a file specified by the variable newfile
+set the file modified date to the value specidfied in filedate and time to 1730
+
+touch -t ${filedate}1730 $newfile
