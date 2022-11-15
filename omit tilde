@@ -1,0 +1,3 @@
+List all files in $HOME/1123 that end in .txt. Omit the files containing a tilde (~) character.
+
+find ./1123 -type f \( -name *.txt ! -name "*~*" \)
