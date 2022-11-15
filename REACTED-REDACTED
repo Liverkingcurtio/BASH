@@ -1,0 +1,4 @@
+copy all lines from src and put it in dst do not contain variable match
+
+
+egrep -v "$match" $src > $dst 
