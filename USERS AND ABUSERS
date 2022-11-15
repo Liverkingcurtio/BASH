@@ -1,0 +1,13 @@
+Create a script that will perform the following actions:
+
+    Print to standard output all usernames from the file path specified by the parameter filename sorted ascending numerically by user id.
+    The file will be in the format of /etc/passwd
+
+
+function q1()
+{
+  #Valid Variables are:
+  filename=$1
+  #Your code here
+sort -t: -k3n $1 | awk -F: '{print $1}'
+}
