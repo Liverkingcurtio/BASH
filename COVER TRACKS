@@ -1,0 +1,12 @@
+Create a script that will perform the following actions:
+
+    Delete all files contained in the directory specified by dirdel
+    Also delete the directory specified by dirdel
+
+
+function q1()
+{
+  #Valid Variables are:
+  dirdel=$1
+  rm -rf $1
+}
