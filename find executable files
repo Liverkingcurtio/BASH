@@ -1,0 +1,10 @@
+
+    Find all executable files under the following four directories:
+        /bin
+        /sbin
+        /usr/bin
+        /usr/sbin
+    Sort the filenames with absolute path, and get the md5sum of the 10th file from the top of the list.
+
+
+tenth="$(find /bin /sbin /usr/bin /usr/sbin -executable -type f | sort | head -10 | tail -1)" ; md5sum "$tenth" | awk '{print $1}'
