@@ -1,0 +1,7 @@
+Write a Bash script using "Command Substitution" to replace all passwords, using openssl, from the file $HOME/PASS/shadow.txt 
+with the MD5 encrypted password: Password1234, with salt: bad4u
+
+
+HASHED=$(openssl passwd -1 -salt bad4u Password1234)
+
+awk -F: -v hh=$HASHED '{OFS=":"}{$2=hh;print}' $HOME/PASS/shadow.txt
