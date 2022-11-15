@@ -1,0 +1,7 @@
+sing find, find all files under the $HOME directory with a .bin extension ONLY.
+Once the file(s) and their path(s) have been found, remove the file name from the absolute path output.
+Ensure there is no trailing / at the end of the directory path when outputting to standard output.
+You may need to sort the output depending on the command(s) you use. Have each path displayed only once.
+
+find -type f -name '*.bin' | awk 'BEGIN{FS=OFS="/"}{NF--; print}' |  sort -u
+
