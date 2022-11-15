@@ -1,0 +1,8 @@
+Create a script that will print to standard output all user names from the /etc/passwd file
+
+
+function q1()
+{
+ awk -F: '{print $1}' /etc/passwd | sort -r
+
+}
