@@ -1,0 +1,7 @@
+
+    Sort the /etc/passwd file numerically by the GID field.
+    For the 10th entry in the sorted passwd file, get an md5 hash of that entry’s home directory.
+    Output ONLY the MD5 hash of the directory's name to standard output.
+
+
+sort -t: -k4n /etc/passwd | sed -n '10p' | awk -F: '{print $6}' | md5sum | awk '{print $1}
