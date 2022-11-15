@@ -1,0 +1,6 @@
+
+    Find all dmesg kernel messages that contain CPU or BIOS (uppercase) in the string, but not usable or reserved (case-insensitive)
+    Print only the msg itself, omitting the bracketed numerical expressions ie: [1.132775]
+
+
+dmesg | egrep "CPU|BIOS" | egrep -iv "usable|reserved" | cut -d] -f2-
